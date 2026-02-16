@@ -106,10 +106,9 @@ const sensors = useSensors(
         <Column title="Done" status="done" tasks={filteredTasks} />
       </div>
 
-      {/* Drag Overlay */}
       <DragOverlay>
         {activeTask ? (
-          <div style={{ pointerEvents: "none" }}>
+          <div style={{ cursor: "grabbing" }}>
             <TaskCard task={activeTask} />
           </div>
         ) : null}
